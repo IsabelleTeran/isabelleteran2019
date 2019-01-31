@@ -1,7 +1,12 @@
 $(document).ready(function(){
   
 var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
-						// build scenes
+            // build scenes
+            
+  new ScrollMagic.Scene({triggerElement: ".parallaxParent"})
+  .setTween(".parallaxParent > div", {y: "20%", ease: Linear.easeNone})
+  .addTo(controller);
+/*
 new ScrollMagic.Scene({triggerElement: "#parallax1"})
   .setTween("#parallax1 > div", {y: "20%", ease: Linear.easeNone})
   .addTo(controller);
